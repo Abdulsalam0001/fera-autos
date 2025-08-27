@@ -145,5 +145,41 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+<script>
+// Limit: max 4 images per field, max 2MB per image
+const MAX_FILES = 4;
+const MAX_SIZE = 2 * 1024 * 1024; // 2MB
+const fields = [
+    'car_images_front[]',
+    'car_images_back[]',
+    'car_images_interior[]',
+    'car_images_other[]'
+];
+
+document.getElementById('sellCarForm').addEventListener('submit', function(e) {
+    let valid = true;
+    let messages = [];
+    fields.forEach(function(field) {
+        const input = document.querySelector(`input[name='${field}']`);
+        if (input && input.files.length > 0) {
+            if (input.files.length > MAX_FILES) {
+                valid = false;
+                messages.push(`You can upload a maximum of ${MAX_FILES} images per section.`);
+            }
+            for (let i = 0; i < input.files.length; i++) {
+                if (input.files[i].size > MAX_SIZE) {
+                    valid = false;
+                    messages.push(`Each image must be less than 2MB.`);
+                    break;
+                }
+            }
+        }
+    });
+    if (!valid) {
+        alert(messages.join('\n'));
+        e.preventDefault();
+    }
+});
+</script>
 </body>
 </html>
