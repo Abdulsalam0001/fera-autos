@@ -1,3 +1,31 @@
+/* Reduce navbar whitespace on mobile */
+@media (max-width: 767.98px) {
+	.header__logo {
+		padding: 10px 0 10px 0 !important;
+		margin-bottom: 0 !important;
+	}
+	.header__logo img {
+		max-height: 40px;
+		width: auto;
+	}
+	.header__nav {
+		padding: 0 !important;
+		margin: 0 !important;
+	}
+	.header .row {
+		align-items: center !important;
+	}
+	.header__menu {
+		margin-top: 0 !important;
+	}
+	.header__logo, .header__nav {
+		min-height: 0 !important;
+	}
+	.header__logo {
+		display: flex;
+		align-items: center;
+	}
+}
 /******************************************************************
   Template Name: HVAC
   Description: HVAC Car Dealer HTML Template
