@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sell Your Car - Feral Autos</title>
+    <title>Upload Car Images - Feral Autos</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
@@ -40,10 +40,10 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="breadcrumb__text">
-                        <h2>Sell Your Car</h2>
+                        <h2>Upload Car Images</h2>
                         <div class="breadcrumb__links">
                             <a href="./index.html"><i class="fa fa-home"></i> Home</a>
-                            <span>Sell Car</span>
+                            <span>Upload Images</span>
                         </div>
                     </div>
                 </div>
@@ -55,50 +55,19 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="contact__form">
-                        <h3 class="mb-4">Car Sale Submission Form</h3>
-                        <form id="sellCarForm" action="#" method="post">
+                        <h3 class="mb-4">You are required to submit images of your car</h3>
+                        <form action="#" method="post" enctype="multipart/form-data">
                             <div class="row">
-                                <div class="col-lg-6">
-                                    <input type="text" name="name" placeholder="Your Name" required>
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="email" name="email" placeholder="Your Email" required>
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="text" name="phone" placeholder="Phone Number" required>
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="text" name="car_make" placeholder="Car Make (e.g. Toyota)" required>
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="text" name="car_model" placeholder="Car Model (e.g. Camry)" required>
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="number" name="year" placeholder="Year" min="1900" max="2099" required>
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="number" name="mileage" placeholder="Mileage (km)" required>
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="text" name="location" placeholder="Location" required>
+                                <div class="col-lg-12 mb-3">
+                                    <label for="car_images" class="form-label">Upload Car Images (at least 1, up to 6):</label>
+                                    <input type="file" name="car_images" id="car_images" accept="image/*" multiple required class="form-control">
+                                    <small class="form-text text-muted">Accepted formats: JPG, PNG. Max 6 images.</small>
                                 </div>
                                 <div class="col-lg-12">
-                                    <input type="number" name="price" placeholder="Expected Price (₦)" required>
-                                </div>
-                                <div class="col-lg-12">
-                                    <textarea name="details" placeholder="Additional Details (Condition, Features, etc.)" rows="4"></textarea>
-                                </div>
-                                <div class="col-lg-12">
-                                    <button type="submit" class="site-btn">Submit Car for Sale</button>
+                                    <button type="submit" class="site-btn">Submit Images</button>
                                 </div>
                             </div>
                         </form>
-                        <div class="mt-4 alert alert-info" role="alert">
-                            <strong>Next Step:</strong> You are required to submit images of your car to complete your listing.
-                        </div>
-                        <div class="text-center mt-3">
-                            <a href="upload-car-images.html" class="site-btn">Proceed to Upload Car Images</a>
-                        </div>
                     </div>
                 </div>
             </div>
