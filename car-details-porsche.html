@@ -127,17 +127,17 @@
                     <div class="car__details__tab">
                         <ul class="nav nav-tabs" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">Vehicle Overview</a>
+                                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab" aria-selected="true">Vehicle Overview</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">Technical</a>
+                                <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab" aria-selected="false">Technical</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab">Features & Options</a>
+                                <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab" aria-selected="false">Features & Options</a>
                             </li>
                         </ul>
                         <div class="tab-content">
-                            <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                            <div class="tab-pane fade show active" id="tabs-1" role="tabpanel">
                                 <div class="car__details__tab__info">
                                     <div class="row">
                                         <div class="col-lg-6 col-md-6">
@@ -166,6 +166,38 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="tab-pane fade" id="tabs-2" role="tabpanel">
+                                <div class="car__details__tab__info">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="car__details__tab__info__item">
+                                                <h5>Engine Specifications</h5>
+                                                <ul>
+                                                    <li><i class="fa fa-check"></i> Engine Type: V8 Twin-Turbo</li>
+                                                    <li><i class="fa fa-check"></i> Displacement: 4.0L</li>
+                                                    <li><i class="fa fa-check"></i> Compression Ratio: 10.1:1</li>
+                                                    <li><i class="fa fa-check"></i> Max Torque: 568 lb-ft</li>
+                                                    <li><i class="fa fa-check"></i> Valvetrain: DOHC</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="car__details__tab__info__item">
+                                                <h5>Transmission & Chassis</h5>
+                                                <ul>
+                                                    <li><i class="fa fa-check"></i> Transmission: 8-Speed Tiptronic S</li>
+                                                    <li><i class="fa fa-check"></i> Suspension: Air Suspension</li>
+                                                    <li><i class="fa fa-check"></i> Steering: Power-assist</li>
+                                                    <li><i class="fa fa-check"></i> Brakes: Carbon Ceramic</li>
+                                                    <li><i class="fa fa-check"></i> Wheels: 21-inch Sport Design</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tabs-3" role="tabpanel">
                                 <div class="car__details__tab__feature">
                                     <div class="row">
                                         <div class="col-lg-3 col-md-6 col-sm-6">
