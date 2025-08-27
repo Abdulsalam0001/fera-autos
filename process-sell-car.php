@@ -33,7 +33,17 @@ $body = "--$boundary\r\n";
 $body .= "Content-Type: text/plain; charset=UTF-8\r\n\r\n";
 $body .= $message . "\r\n";
 
-$fields = ['car_images_front', 'car_images_back', 'car_images_interior', 'car_images_other'];
+$fields = [
+    'car_images_back_side',
+    'car_images_front_side',
+    'car_images_bonnet',
+    'car_images_engine',
+    'car_images_driver_door',
+    'car_images_passenger_door',
+    'car_images_dashboard',
+    'car_images_interior_roof',
+    'car_images_back_seat'
+];
 foreach ($fields as $field) {
     if (!empty($_FILES[$field]['name'][0])) {
         foreach ($_FILES[$field]['tmp_name'] as $key => $tmp_name) {
