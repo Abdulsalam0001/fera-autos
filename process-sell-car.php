@@ -53,11 +53,11 @@ foreach ($fields as $field) {
 }
 $body .= "--$boundary--";
 
-$mail_sent = mail($admin_email, $subject, $body, $headers);
-
-if ($mail_sent) {
-    echo "<p>Thank you! Your car details have been submitted successfully. We will contact you soon.</p>";
+if (mail($admin_email, $subject, $body, $headers)) {
+    header('Location: https://feralautos.org/thank-you.html');
+    exit();
 } else {
-    echo "<p>Sorry, there was an error sending your submission. Please try again later.</p>";
+    echo '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Submission Error - Feral Autos</title><link rel="stylesheet" href="/css/bootstrap.min.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="stylesheet" href="/css/style.css"></head><body><div class="container text-center mt-5"><h2>Sorry, there was an error sending your submission.</h2><p>Please try again later or contact support@feralautos.org.</p><a href="/sell-car.html" class="site-btn mt-3">Back to Form</a></div></body></html>';
+    exit();
 }
 ?>
