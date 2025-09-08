@@ -162,28 +162,36 @@
     <!-- About Section Begin -->
    
     <!-- About Section End -->
-
-    <!-- Car Section Begin -->
-    <section class="car spad">
-        <div class="container">
-            <div class="section-title text-center">
-                <span>Our Car Listing</span>
-                <h2>Feral Autos Car Listing</h2>
+<section id="listing" class="car spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <span>Our Car Listing</span>
+                    <h2> View Car Collection </h2>
+                </div>
+                <ul class="filter__controls">
+                    <li class="active" data-filter="*" role="button" tabindex="0">All</li>
+                    <li data-filter=".sale" role="button" tabindex="0">Available for Sale</li>
+                    <li data-filter=".sold" role="button" tabindex="0">Sold</li>
+                </ul>
             </div>
-            <div class="row justify-content-center">
-                <!-- Toyota FJ Cruiser (Available) -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="car__item">
-                        <a href="./car-details2.html">
+        </div>
+        <div class="row car-filter">
+
+            <!-- Toyota FJ Cruiser -->
+            <div class="col-lg-3 col-md-4 col-sm-6 mix sale">
+                <div class="car__item">
+                    <a href="./car-details2.html">
                         <div class="car__item__pic__slider owl-carousel">
-                            <img src="/f.jpg" alt="">
-                            <img src="/f2.jpg" alt="">
-                            <img src="/f0.jpg" alt="">
+                            <img src="/f.jpg" alt="Toyota FJ Cruiser - Front">
+                            <img src="/f2.jpg" alt="Toyota FJ Cruiser - Side">
+                            <img src="/f0.jpg" alt="Toyota FJ Cruiser - Rear">
                         </div>
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
                                 <div class="label-date">2016</div>
-                                <h5><a href="./car-details2.html">Toyota FJ Cruiser</a></h5>
+                                <h5>Toyota FJ Cruiser</h5>
                                 <ul>
                                     <li><span>65,000</span> km</li>
                                     <li>Automatic</li>
@@ -194,24 +202,26 @@
                                 <span class="car-option sale">For Sale</span>
                                 <h6>₦12,000,000</h6>
                             </div>
-                        </div></a>
-                    </div>
+                        </div>
+                    </a>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="car__item">
-                        <a href="./car-details-lexus.html">
+            </div>
+
+            <!-- Lexus ES350 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 mix sale">
+                <div class="car__item">
+                    <a href="./car-details-lexus.html">
                         <div class="car__item__pic__slider owl-carousel">
-                            <img src="/l1.jpg" alt="">
-                            <img src="/l2.jpg" alt="">
-                            <img src="/l3.jpg" alt="">
-                            <img src="/l4.jpg" alt="">
-                            <img src="/l5.jpg" alt="">
-                        
+                            <img src="/l1.jpg" alt="Lexus ES350 - Front">
+                            <img src="/l2.jpg" alt="Lexus ES350 - Side">
+                            <img src="/l5.jpg" alt="Lexus ES350 - Interior">
+                            <img src="/l3.jpg" alt="Lexus ES350 - Rear">
+                            <img src="/l4.jpg" alt="Lexus ES350 - Dashboard">
                         </div>
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
-                                <div class="label-date">2012</div>
-                                <h5><a href="./car-details-lexus.html">Lexus ES 350</a></h5>
+                                <div class="label-date">2016</div>
+                                <h5>Lexus ES350</h5>
                                 <ul>
                                     <li><span>65,000</span> km</li>
                                     <li>Automatic</li>
@@ -220,56 +230,27 @@
                             </div>
                             <div class="car__item__price">
                                 <span class="car-option sale">For Sale</span>
-                                <h6>Make an Offer</h6>
+                                <h6>₦12,000,000</h6>
                             </div>
-                        </div></a>
-                    </div>
-                </div>
-                 <div class="col-lg-4 col-md-6">
-                    <div class="car__item">
-                        <a href="./car-details-range-rover.html">
-                        <div class="car__item__pic__slider owl-carousel">
-                            <img src="/r1.jpeg" alt="">
-                            <img src="/r2.jpeg" alt="">
-                            <img src="/r3.jpeg" alt="">
-                            <img src="/r4.jpeg" alt="">
-                            <img src="/r5.jpeg" alt="">
-                              <img src="/r6.jpeg" alt="">
-                            <img src="/r7.jpeg" alt="">
-                            <img src="/r8.jpeg" alt="">
-                        
                         </div>
-                        <div class="car__item__text">
-                            <div class="car__item__text__inner">
-                                <div class="label-date">2012</div>
-                                <h5><a href="./car-details-range-rover.html">Range Rover Sport</a></h5>
-                                <ul>
-                                    <li><span>65,000</span> km</li>
-                                    <li>Automatic</li>
-                                    <li><span>132</span> hp</li>
-                                </ul>
-                            </div>
-                            <div class="car__item__price">
-                                <span class="car-option sale">For Sale</span>
-                                <h6>Make an Offer</h6>
-                            </div>
-                        </div></a>
-                    </div>
+                    </a>
                 </div>
-                <!-- Acura ZDX (Available) -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="car__item">
-                        <a href="./car-details.html">
+            </div>
+
+            <!-- Acura ZDX -->
+            <div class="col-lg-3 col-md-4 col-sm-6 mix sale">
+                <div class="car__item">
+                    <a href="./car-details.html">
                         <div class="car__item__pic__slider owl-carousel">
-                            <img src="/a1.jpg" alt="">
-                            <img src="/a2.jpg" alt="">
-                            <img src="/a0.jpg" alt="">
-                            <img src="/a3.jpg" alt="">
+                            <img src="/a1.jpg" alt="Acura ZDX - Front">
+                            <img src="/a2.jpg" alt="Acura ZDX - Side">
+                            <img src="/a0.jpg" alt="Acura ZDX - Rear">
+                            <img src="/a3.jpg" alt="Acura ZDX - Interior">
                         </div>
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
                                 <div class="label-date">2010</div>
-                                <h5><a href="#">Acura ZDX</a></h5>
+                                <h5>Acura ZDX</h5>
                                 <ul>
                                     <li><span>40,000</span> km</li>
                                     <li>Automatic</li>
@@ -280,133 +261,248 @@
                                 <span class="car-option sale">For Sale</span>
                                 <h6>₦15,000,000</h6>
                             </div>
-                        </div></a>
-                    </div>
-                </div>
-                <!-- Mercedes-Benz G-Class (Sold) -->
-              <div class="col-lg-4 col-md-6">
-    <a href="car-details-benz.html" style="text-decoration:none;color:inherit;">
-        <div class="car__item">
-            <div class="car__item__pic__slider owl-carousel">
-                <img src="/b1.jpg" alt="">
-                <img src="/b2.jpg" alt="">
-                <img src="/b3.jpg" alt="">
-                <img src="/b4.jpg" alt="">
-                <img src="/b5.jpg" alt="">
-                <img src="/b6.jpg" alt="">
-            </div>
-            <div class="car__item__text">
-                <div class="car__item__text__inner">
-                    <div class="label-date">2021</div>
-                    <h5>Mercedes-Benz G-Class AMG</h5>
-                    <ul>
-                        <li><span>25,000</span> km</li>
-                        <li>Automatic</li>
-                        <li><span>577</span> hp</li>
-                    </ul>
-                </div>
-                <div class="car__item__price">
-                    <span class="car-option">Sold</span>
-                    <h6>Inventory Sold</h6>
-                </div>
-            </div>
-        </div>
-    </a>
-</div>
-
-<div class="col-lg-4 col-md-6">
-    <a href="./car-details-bmw.html" style="text-decoration:none;color:inherit;">
-        <div class="car__item">
-            <div class="car__item__pic__slider owl-carousel">
-                <img src="/u1.jpg" alt="">
-                <img src="/u2.jpg" alt="">
-                <img src="/u3.jpg" alt="">
-                <img src="/u4.jpg" alt="">
-                <img src="/u5.jpg" alt="">
-                <img src="/u6.jpg" alt="">
-            </div>
-            <div class="car__item__text">
-                <div class="car__item__text__inner">
-                    <div class="label-date">2022</div>
-                    <h5>BMW X7 M50i</h5>
-                    <ul>
-                        <li><span>18,000</span> km</li>
-                        <li>Automatic</li>
-                        <li><span>523</span> hp</li>
-                    </ul>
-                </div>
-                <div class="car__item__price">
-                    <span class="car-option">Sold</span>
-                    <h6>Inventory Sold</h6>
-                </div>
-            </div>
-        </div>
-    </a>
-</div>
-
-                <!-- Hyundai Sonata (Sold) -->
-                <div class="col-lg-4 col-md-6">
-                    <a href="car-details-hyundai.html" style="text-decoration:none;color:inherit;">
-                    <div class="car__item">
-                        <div class="car__item__pic__slider owl-carousel">
-                            <img src="/h1.jpg" alt="">
-                            <img src="/h2.jpg" alt="">
-                            <img src="/h3.jpg" alt="">
-                            <img src="/h4.jpg" alt="">
-                            <img src="/h5.jpg" alt="">
-                            <img src="/h6.jpg" alt="">
-                            <img src="/h7.jpg" alt="">
                         </div>
-                        <div class="car__item__text">
-                            <div class="car__item__text__inner">
-                                <div class="label-date">2023</div>
-                                <h5>Hyundai Sonata</h5>
-                                <ul>
-                                    <li><span>12,000</span> km</li>
-                                    <li>Automatic</li>
-                                    <li><span>285</span> hp</li>
-                                </ul>
-                            </div>
-                            <div class="car__item__price">
-                                <span class="car-option">Sold</span>
-                                <h6>Inventory Sold</h6>
-                            </div>
-                        </div>
-                    </div>
                     </a>
                 </div>
+            </div>
 
-                <!-- Porsche Cayenne Turbo S (For Sale) -->
-                <div class="col-lg-4 col-md-6">
-                    <a href="car-details-porsche.html" style="text-decoration:none;color:inherit;">
-                    <div class="car__item">
+            <!-- Range Rover ARES -->
+            <div class="col-lg-3 col-md-4 col-sm-6 mix sale">
+                <div class="car__item">
+                    <a href="./car-details-range-rover.html">
                         <div class="car__item__pic__slider owl-carousel">
-                            <img src="/p1.jpg" alt="">
-                            <img src="/p2.jpg" alt="">
-                            <img src="/p3.jpg" alt="">
-                            <img src="/p4.jpg" alt="">
+                            <img src="/r1.jpg" alt="Range Rover ARES - Front">
+                            <img src="/r2.jpg" alt="Range Rover ARES - Side">
+                            <img src="/r3.jpg" alt="Range Rover ARES - Rear">
+                            <img src="/r4.jpg" alt="Range Rover ARES - Interior">
                         </div>
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
-                                <div class="label-date">2019</div>
-                                <h5>Porsche Cayenne </h5>
+                                <div class="label-date">2010</div>
+                                <h5>Range Rover Sport Limited Edition ARES</h5>
                                 <ul>
-                                    <li><span>22,000</span> km</li>
+                                    <li><span>40,000</span> km</li>
                                     <li>Automatic</li>
-                                    <li><span>541</span> hp</li>
+                                    <li><span>300</span> hp</li>
                                 </ul>
                             </div>
                             <div class="car__item__price">
                                 <span class="car-option sale">For Sale</span>
-                                <h6> Inventory Sold </h6>
+                                <h6>Call for price</h6>
                             </div>
                         </div>
-                    </div>
                     </a>
                 </div>
             </div>
+
+            <!-- ✅ NEW CARS START HERE -->
+
+            <!-- Mercedes Benz GLK -->
+            <div class="col-lg-3 col-md-4 col-sm-6 mix sale">
+                <div class="car__item">
+                    <a href="./car-details-glk.html">
+                        <div class="car__item__pic__slider owl-carousel">
+                            <img src="/glk1.jpg" alt="Mercedes Benz GLK - Front">
+                            <img src="/glk2.jpg" alt="Mercedes Benz GLK - Side">
+                            <img src="/glk3.jpg" alt="Mercedes Benz GLK - Rear">
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <div class="label-date">2015</div>
+                                <h5>Mercedes Benz GLK</h5>
+                                <ul>
+                                    <li><span>75,000</span> km</li>
+                                    <li>Automatic</li>
+                                    <li><span>268</span> hp</li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <span class="car-option sale">For Sale</span>
+                                <h6>₦10,500,000</h6>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mercedes Benz E350 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 mix sale">
+                <div class="car__item">
+                    <a href="./car-details-e350.html">
+                        <div class="car__item__pic__slider owl-carousel">
+                            <img src="/e1.jpg" alt="Mercedes Benz E350 - Front">
+                            <img src="/e2.jpg" alt="Mercedes Benz E350 - Side">
+                            <img src="/e3.jpg" alt="Mercedes Benz E350 - Rear">
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <div class="label-date">2017</div>
+                                <h5>Mercedes Benz E350</h5>
+                                <ul>
+                                    <li><span>60,000</span> km</li>
+                                    <li>Automatic</li>
+                                    <li><span>302</span> hp</li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <span class="car-option sale">For Sale</span>
+                                <h6>₦14,000,000</h6>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mercedes Benz C300 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 mix sale">
+                <div class="car__item">
+                    <a href="./car-details-c300.html">
+                        <div class="car__item__pic__slider owl-carousel">
+                            <img src="/c1.jpg" alt="Mercedes Benz C300 - Front">
+                            <img src="/c2.jpg" alt="Mercedes Benz C300 - Side">
+                            <img src="/c3.jpg" alt="Mercedes Benz C300 - Rear">
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <div class="label-date">2018</div>
+                                <h5>Mercedes Benz C300</h5>
+                                <ul>
+                                    <li><span>55,000</span> km</li>
+                                    <li>Automatic</li>
+                                    <li><span>241</span> hp</li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <span class="car-option sale">For Sale</span>
+                                <h6>₦13,000,000</h6>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Lexus RX 350 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 mix sale">
+                <div class="car__item">
+                    <a href="./car-details-rx350.html">
+                        <div class="car__item__pic__slider owl-carousel">
+                            <img src="/rx1.jpg" alt="Lexus RX 350 - Front">
+                            <img src="/rx2.jpg" alt="Lexus RX 350 - Side">
+                            <img src="/rx3.jpg" alt="Lexus RX 350 - Rear">
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <div class="label-date">2019</div>
+                                <h5>Lexus RX 350</h5>
+                                <ul>
+                                    <li><span>50,000</span> km</li>
+                                    <li>Automatic</li>
+                                    <li><span>295</span> hp</li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <span class="car-option sale">For Sale</span>
+                                <h6>₦16,000,000</h6>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Lexus LX570 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 mix sale">
+                <div class="car__item">
+                    <a href="./car-details-lx570.html">
+                        <div class="car__item__pic__slider owl-carousel">
+                            <img src="/lx1.jpg" alt="Lexus LX570 - Front">
+                            <img src="/lx2.jpg" alt="Lexus LX570 - Side">
+                            <img src="/lx3.jpg" alt="Lexus LX570 - Rear">
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <div class="label-date">2020</div>
+                                <h5>Lexus LX570</h5>
+                                <ul>
+                                    <li><span>45,000</span> km</li>
+                                    <li>Automatic</li>
+                                    <li><span>383</span> hp</li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <span class="car-option sale">For Sale</span>
+                                <h6>₦35,000,000</h6>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Dodge 2018 (Blue) -->
+            <div class="col-lg-3 col-md-4 col-sm-6 mix sale">
+                <div class="car__item">
+                    <a href="./car-details-dodge.html">
+                        <div class="car__item__pic__slider owl-carousel">
+                            <img src="/dodge1.jpg" alt="2018 Dodge - Front">
+                            <img src="/dodge2.jpg" alt="2018 Dodge - Side">
+                            <img src="/dodge3.jpg" alt="2018 Dodge - Rear">
+                            <img src="/dodge4.jpg" alt="2018 Dodge - Interior">
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <div class="label-date">2018</div>
+                                <h5>Blue Dodge</h5>
+                                <ul>
+                                    <li><span>70,000</span> km</li>
+                                    <li>Automatic</li>
+                                    <li><span>292</span> hp</li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <span class="car-option sale">For Sale</span>
+                                <h6>₦11,000,000</h6>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ✅ NEW CARS END -->
+
+            <!-- Existing SOLD cars continue below -->
+            <!-- Mercedes-Benz G-Class (Sold) -->
+            <div class="col-lg-3 col-md-4 col-sm-6 mix sold">
+                <div class="car__item">
+                    <div class="car__item__pic__slider owl-carousel">
+                        <img src="/b1.jpg" alt="Mercedes-Benz G-Class - Front">
+                        <img src="/b2.jpg" alt="Mercedes-Benz G-Class - Rear">
+                        <img src="/b3.jpg" alt="Mercedes-Benz G-Class - Interior">
+                    </div>
+                    <div class="car__item__text">
+                        <div class="car__item__text__inner">
+                            <div class="label-date">2021</div>
+                            <h5><a href="car-details-benz.html">Mercedes-Benz G-Class AMG</a></h5>
+                            <ul>
+                                <li><span>25,000</span> km</li>
+                                <li>Automatic</li>
+                                <li><span>577</span> hp</li>
+                            </ul>
+                        </div>
+                        <div class="car__item__price">
+                            <span class="car-option sold">SOLD</span>
+                            <h6>Inventory Sold</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- (BMW X7, Hyundai Sonata, Porsche Cayenne remain unchanged) -->
+
         </div>
-    </section>
+    </div>
+</section>
+
+    <!-- Car Section Begin -->
+    
     <!-- Car Section End -->
 
     <!-- Footer Section Begin -->
