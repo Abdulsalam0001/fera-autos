@@ -1,178 +1,348 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Car Details</title>
-   <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
+<meta name="application-name" content="&nbsp;"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+
+<meta name="description" content="The Biggest and Most Trustworthy Nigerian Used Car Dealer in the Country..">
+<meta name="keywords" content="Feral Autos, Mercedes-Benz, G-Class, AMG, Luxury SUV">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Dodge - Feral Autos</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+<!-- Css Styles -->
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+<link rel="stylesheet" href="css/nice-select.css" type="text/css">
+<link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+<link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+<link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+<link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+<link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
+
 <body>
-
-<!-- ===== Car Details Section ===== -->
-<section class="car-details spad">
-  <div class="container">
-    <div class="row">
-      
-      <!-- Car Images -->
-      <div class="col-lg-8">
-        <div class="car__details__pic__slider owl-carousel" id="car-images">
-          <!-- Images injected by JS -->
-        </div>
-      </div>
-      
-      <!-- Car Info -->
-      <div class="col-lg-4">
-        <div class="car__details__text">
-          <div class="car__details__title">
-            <h3 id="car-title">Loading...</h3>
-            <span id="car-year"></span>
-          </div>
-          <div class="car__details__price">
-            <h4 id="car-price"></h4>
-          </div>
-          <ul class="car__details__list">
-            <li><span>Kilometers:</span> <span id="car-km"></span></li>
-            <li><span>Transmission:</span> <span id="car-transmission"></span></li>
-            <li><span>Horsepower:</span> <span id="car-hp"></span></li>
-          </ul>
-        </div>
-      </div>
-
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
     </div>
 
-    <!-- Tabs -->
-    <div class="car__details__tab">
-      <ul class="nav nav-tabs" role="tablist">
-        <li><a class="active" data-toggle="tab" href="#overview" role="tab">Overview</a></li>
-        <li><a data-toggle="tab" href="#tech" role="tab">Technical</a></li>
-        <li><a data-toggle="tab" href="#features" role="tab">Features</a></li>
-      </ul>
-      <div class="tab-content">
-        <div class="tab-pane active" id="overview" role="tabpanel">
-          <p id="car-overview">Loading overview...</p>
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <ul class="header__top__widget">
+                            <li><i class="fa fa-clock-o"></i> Mon - Sat: 08:00 am to 6:00 pm</li>
+                            <li><i class="fa fa-envelope-o"></i> support@feralautos.org</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="header__top__right">
+                            <div class="header__top__phone">
+                                <i class="fa fa-phone"></i>
+                                <span>+234 913224466861</span>
+                            </div>
+                            <div class="header__top__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="tab-pane" id="tech" role="tabpanel">
-          <ul id="car-technical"></ul>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="header__nav">
+                        <nav class="header__menu">
+                            <ul>
+                                <li><a href="./index.html">Home</a></li>
+                                <li class="active"><a href="./car.html">Cars</a></li>
+                                <li><a href="./sell-car.html">Sell Car</a></li>
+                                <li><a href="./about.html">About</a></li>
+                                <li><a href="./contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                        <div class="header__nav__widget">
+                            <div class="header__nav__widget__btn">
+                                <a href="#"><i class="fa fa-car"></i></a>
+                                <a href="#" class="search-switch"><i class="fa fa-search"></i></a>
+                            </div>
+                            <a href="tel://+2349133224466861" class="primary-btn">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="tab-pane" id="features" role="tabpanel">
-          <ul id="car-features"></ul>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option set-bg" data-setbg="img/breadcrumb-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2 id="breadcrumb-title">Honda Accord 2016</h2>
+                        <div class="breadcrumb__links">
+                            <a href="./index.html"><i class="fa fa-home"></i> Home</a>
+                            <a href="./car.html">Car Listing</a>
+                            <span id="breadcrumb-subtitle">Honda Accord 2016</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
+    <!-- Breadcrumb End -->
 
-  </div>
-</section>
+    <!-- Car Details Section Begin -->
+    <section class="car-details spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="car__details__pic">
+                        <div class="car__details__pic__large">
+                            <img class="car-big-img" id="car-main-img" src="/h1.jpg" alt="">
+                        </div>
+                        <div class="car-thumbs">
+                            <div class="car-thumbs-track car__thumb__slider owl-carousel" id="car-thumbs">
+                                <!-- Thumbnails will load here -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="car__details__tab">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab" aria-selected="true">Vehicle Overview</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab" aria-selected="false">Technical Specs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab" aria-selected="false">Features & Options</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="car-tabs">
+                            <!-- Tabs will load dynamically -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="car__details__sidebar">
+                        <div class="car__details__sidebar__model">
+                            <ul>
+                                <li>Stock <span id="car-stock">MBG21X459934</span></li>
+                                <li>Vin <span id="car-vin">Undisclosed</span></li>
+                            </ul>
+                            <a href="tel:+234913224466861" class="primary-btn">Get Today's Price</a>
+                            <p>Call for current pricing</p>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Car Details Section End -->
 
-<!-- ===== JavaScript Logic ===== -->
+    <!-- Footer Section Begin -->
+    <footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
+        <div class="container">
+            <div class="footer__contact">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__contact__title">
+                            <h2>Contact Feral Autos Today!</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__contact__option">
+                            <div class="option__item"><i class="fa fa-phone"></i> +234 913224466861</div>
+                            <div class="option__item email"><i class="fa fa-envelope-o"></i> support@feralautos.org</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright__text">
+                <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> 
+                Feral Autos - All rights reserved | Powered by <a href="https://mercury-labs.pages.dev/" target="_blank">Mercury Labs</a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Search Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search End -->
 <script>
   // Car Database
   const cars = {
-    "lexus-es350": {
-      title: "Lexus ES 350",
-      year: 2012,
-      km: "65,000",
-      transmission: "Automatic",
-      hp: 268,
-      price: "Make an Offer",
+    "accord2016": {
+      name: "Honda Accord 2016",
+      images: ["/h1.jpg","/h2.jpg","/h3.jpg","/h4.jpg","/h5.jpg"],
+      breadcrumb: "Honda Accord 2016",
+      overview: {
+        model: "Honda Accord 2016",
+        engine: "2.4L I4",
+        power: "185 Horsepower",
+        transmission: "CVT",
+        drivetrain: "FWD",
+        perf: ["0-60 mph: 7.6 seconds","Top Speed: 149 mph","City MPG: 13","Highway MPG: 16","Fuel Tank: 26.4 gallons"]
+      },
+      technical: {
+        engine: ["Engine Type: I4","Displacement: 2.4L","Compression: 10.1:1","Max Torque: 181 lb-ft","Valvetrain: DOHC"],
+        chassis: ["Transmission: CVT","Suspension: Independent","Steering: Electric","Brakes: ABS","Wheels: 17-inch Alloy"]
+      },
+      features: {
+        safety: ["ABS","Traction Control","Rearview Camera","Airbags"],
+        comfort: ["Cloth Seats","Dual-Zone AC","Bluetooth","Cruise Control"],
+        offroad: ["N/A"]
+      }
+    },
+    "lexuses350": {
+      name: "Lexus ES 350 2012",
       images: ["/l1.jpg","/l2.jpg","/l3.jpg","/l4.jpg","/l5.jpg"],
-      overview: "A smooth, luxury sedan perfect for comfort and long rides.",
-      technical: ["Engine: 3.5L V6", "Fuel: Petrol", "Seats: 5"],
-      features: ["Leather seats", "Bluetooth", "Reverse camera"]
+      breadcrumb: "Lexus ES 350 2012",
+      overview: {
+        model: "Lexus ES 350 2012",
+        engine: "3.5L V6",
+        power: "268 Horsepower",
+        transmission: "6-Speed Automatic",
+        drivetrain: "FWD",
+        perf: ["0-60 mph: 6.8 seconds","Top Speed: 131 mph","City MPG: 19","Highway MPG: 28","Fuel Tank: 70 liters"]
+      },
+      technical: {
+        engine: ["Engine Type: V6","Displacement: 3.5L","Compression: 10.8:1","Max Torque: 248 lb-ft","Valvetrain: DOHC"],
+        chassis: ["Transmission: 6-Speed Automatic","Suspension: MacPherson Strut","Steering: Electric Power","Brakes: Disc","Wheels: 17-inch Alloy"]
+      },
+      features: {
+        safety: ["ABS","Brake Assist","Lane Departure Alert","Blind Spot Monitor"],
+        comfort: ["Leather Seats","Sunroof","Dual-Zone Climate Control","Premium Audio"],
+        offroad: ["N/A"]
+      }
     },
-    "rx350": {
-      title: "Lexus RX 350",
-      year: 2018,
-      km: "45,000",
-      transmission: "Automatic",
-      hp: 295,
-      price: "₦25,000,000",
-      images: ["/rx1.jpg","/rx2.jpg","/rx3.jpg","/rx4.jpg"],
-      overview: "Luxury crossover with spacious interior and top safety ratings.",
-      technical: ["Engine: 3.5L V6", "AWD", "Seats: 5"],
-      features: ["Panoramic sunroof", "Adaptive cruise", "Premium sound system"]
-    },
-    "rav4": {
-      title: "Toyota RAV4 LE",
-      year: 2017,
-      km: "60,000",
-      transmission: "Automatic",
-      hp: 176,
-      price: "₦14,500,000",
+    "rav4le2017": {
+      name: "Toyota RAV4 LE 2017",
       images: ["/rv1.jpg","/rv2.jpg","/rv3.jpg","/rv4.jpg","/rv5.jpg"],
-      overview: "Reliable SUV with efficiency and comfort for families.",
-      technical: ["Engine: 2.5L I4", "FWD", "Seats: 5"],
-      features: ["Touchscreen display", "Lane assist", "Backup camera"]
-    },
-    "gle": {
-      title: "Mercedes-Benz GLE 350",
-      year: 2021,
-      km: "30,000",
-      transmission: "Automatic",
-      hp: 255,
-      price: "₦45,000,000",
-      images: ["/gle1.jpg","/gle2.jpg","/gle3.jpg","/gle4.jpg"],
-      overview: "Premium luxury SUV with outstanding performance.",
-      technical: ["Engine: 2.0L Turbo", "AWD", "Seats: 5"],
-      features: ["MBUX system", "Ambient lighting", "360° camera"]
-    },
-    "glc": {
-      title: "Mercedes-Benz GLC 300",
-      year: 2020,
-      km: "28,000",
-      transmission: "Automatic",
-      hp: 255,
-      price: "₦38,000,000",
-      images: ["/glc1.jpg","/glc2.jpg","/glc3.jpg","/glc4.jpg"],
-      overview: "Compact SUV with sporty design and luxury interior.",
-      technical: ["Engine: 2.0L Turbo", "RWD", "Seats: 5"],
-      features: ["Apple CarPlay", "Power liftgate", "Heated seats"]
+      breadcrumb: "Toyota RAV4 LE 2017",
+      overview: {
+        model: "Toyota RAV4 LE 2017",
+        engine: "2.5L I4",
+        power: "176 Horsepower",
+        transmission: "Automatic",
+        drivetrain: "FWD",
+        perf: ["0-60 mph: 9.1 seconds","Top Speed: 120 mph","City MPG: 23","Highway MPG: 30","Fuel Tank: 15.9 gallons"]
+      },
+      technical: {
+        engine: ["Engine Type: I4","Displacement: 2.5L","Compression: 10.4:1","Max Torque: 172 lb-ft","Valvetrain: DOHC"],
+        chassis: ["Transmission: Automatic","Suspension: Independent","Steering: Electric Power","Brakes: ABS","Wheels: 17-inch Steel"]
+      },
+      features: {
+        safety: ["Toyota Safety Sense","Lane Assist","Pre-Collision System","Backup Camera"],
+        comfort: ["Fabric Seats","AC","Bluetooth","USB Ports"],
+        offroad: ["Hill Start Assist","Traction Control"]
+      }
     }
   };
 
-  // Get car id from URL
+  // Get URL param
   const params = new URLSearchParams(window.location.search);
   const carId = params.get("id");
 
-  // Inject data
   if (cars[carId]) {
     const car = cars[carId];
 
-    document.getElementById("car-title").innerText = car.title;
-    document.getElementById("car-year").innerText = car.year;
-    document.getElementById("car-price").innerText = car.price;
-    document.getElementById("car-km").innerText = car.km;
-    document.getElementById("car-transmission").innerText = car.transmission;
-    document.getElementById("car-hp").innerText = car.hp + " hp";
+    // Update breadcrumb & titles
+    document.querySelector(".breadcrumb__text h2").innerText = car.name;
+    document.querySelector(".breadcrumb__links span").innerText = car.breadcrumb;
 
-    document.getElementById("car-images").innerHTML = car.images.map(img => `<img src="${img}" alt="">`).join("");
-    document.getElementById("car-overview").innerText = car.overview;
-    document.getElementById("car-technical").innerHTML = car.technical.map(t => `<li>${t}</li>`).join("");
-    document.getElementById("car-features").innerHTML = car.features.map(f => `<li>${f}</li>`).join("");
+    // Update main big image
+    document.querySelector(".car-big-img").src = car.images[0];
 
-  } else {
-    document.getElementById("car-title").innerText = "Car Not Found";
+    // Update thumbnails
+    const thumbsContainer = document.querySelector(".car-thumbs-track");
+    thumbsContainer.innerHTML = "";
+    car.images.forEach(img => {
+      thumbsContainer.innerHTML += `
+        <div class="ct" data-imgbigurl="${img}">
+          <img src="${img}" alt="">
+        </div>`;
+    });
+
+    // Vehicle Overview
+    const overviewCols = document.querySelectorAll("#tabs-1 .car__details__tab__info__item ul");
+    overviewCols[0].innerHTML = `
+      <li><i class="fa fa-check"></i> Model: ${car.overview.model}</li>
+      <li><i class="fa fa-check"></i> Engine: ${car.overview.engine}</li>
+      <li><i class="fa fa-check"></i> Power: ${car.overview.power}</li>
+      <li><i class="fa fa-check"></i> Transmission: ${car.overview.transmission}</li>
+      <li><i class="fa fa-check"></i> Drivetrain: ${car.overview.drivetrain}</li>
+    `;
+    overviewCols[1].innerHTML = car.overview.perf.map(p => `<li><i class="fa fa-check"></i> ${p}</li>`).join("");
+
+    // Technical Specs
+    const techCols = document.querySelectorAll("#tabs-2 .car__details__tab__info__item ul");
+    techCols[0].innerHTML = car.technical.engine.map(e => `<li><i class="fa fa-check"></i> ${e}</li>`).join("");
+    techCols[1].innerHTML = car.technical.chassis.map(c => `<li><i class="fa fa-check"></i> ${c}</li>`).join("");
+
+    // Features
+    const featureCols = document.querySelectorAll("#tabs-3 .car__details__tab__feature__item ul");
+    featureCols[0].innerHTML = car.features.safety.map(f => `<li><i class="fa fa-check-circle"></i> ${f}</li>`).join("");
+    featureCols[1].innerHTML = car.features.comfort.map(f => `<li><i class="fa fa-check-circle"></i> ${f}</li>`).join("");
+    featureCols[2].innerHTML = car.features.offroad.map(f => `<li><i class="fa fa-check-circle"></i> ${f}</li>`).join("");
   }
 </script>
 
-<!-- JS Plugins -->
-<script src="jquery.min.js"></script>
-<script src="owl.carousel.min.js"></script>
-<script>
-  $(document).ready(function(){
-    $(".owl-carousel").owlCarousel({
-      items:1,
-      loop:true,
-      autoplay:true
-    });
-  });
-</script>
+    <!-- Js Plugins --> 
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
