@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Details</title>
+   <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+
+<!-- ===== Car Details Section ===== -->
+<section class="car-details spad">
+  <div class="container">
+    <div class="row">
+      
+      <!-- Car Images -->
+      <div class="col-lg-8">
+        <div class="car__details__pic__slider owl-carousel" id="car-images">
+          <!-- Images injected by JS -->
+        </div>
+      </div>
+      
+      <!-- Car Info -->
+      <div class="col-lg-4">
+        <div class="car__details__text">
+          <div class="car__details__title">
+            <h3 id="car-title">Loading...</h3>
+            <span id="car-year"></span>
+          </div>
+          <div class="car__details__price">
+            <h4 id="car-price"></h4>
+          </div>
+          <ul class="car__details__list">
+            <li><span>Kilometers:</span> <span id="car-km"></span></li>
+            <li><span>Transmission:</span> <span id="car-transmission"></span></li>
+            <li><span>Horsepower:</span> <span id="car-hp"></span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Tabs -->
+    <div class="car__details__tab">
+      <ul class="nav nav-tabs" role="tablist">
+        <li><a class="active" data-toggle="tab" href="#overview" role="tab">Overview</a></li>
+        <li><a data-toggle="tab" href="#tech" role="tab">Technical</a></li>
+        <li><a data-toggle="tab" href="#features" role="tab">Features</a></li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active" id="overview" role="tabpanel">
+          <p id="car-overview">Loading overview...</p>
+        </div>
+        <div class="tab-pane" id="tech" role="tabpanel">
+          <ul id="car-technical"></ul>
+        </div>
+        <div class="tab-pane" id="features" role="tabpanel">
+          <ul id="car-features"></ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== JavaScript Logic ===== -->
+<script>
+  // Car Database
+  const cars = {
+    "lexus-es350": {
+      title: "Lexus ES 350",
+      year: 2012,
+      km: "65,000",
+      transmission: "Automatic",
+      hp: 268,
+      price: "Make an Offer",
+      images: ["/l1.jpg","/l2.jpg","/l3.jpg","/l4.jpg","/l5.jpg"],
+      overview: "A smooth, luxury sedan perfect for comfort and long rides.",
+      technical: ["Engine: 3.5L V6", "Fuel: Petrol", "Seats: 5"],
+      features: ["Leather seats", "Bluetooth", "Reverse camera"]
+    },
+    "rx350": {
+      title: "Lexus RX 350",
+      year: 2018,
+      km: "45,000",
+      transmission: "Automatic",
+      hp: 295,
+      price: "₦25,000,000",
+      images: ["/rx1.jpg","/rx2.jpg","/rx3.jpg","/rx4.jpg"],
+      overview: "Luxury crossover with spacious interior and top safety ratings.",
+      technical: ["Engine: 3.5L V6", "AWD", "Seats: 5"],
+      features: ["Panoramic sunroof", "Adaptive cruise", "Premium sound system"]
+    },
+    "rav4": {
+      title: "Toyota RAV4 LE",
+      year: 2017,
+      km: "60,000",
+      transmission: "Automatic",
+      hp: 176,
+      price: "₦14,500,000",
+      images: ["/rv1.jpg","/rv2.jpg","/rv3.jpg","/rv4.jpg","/rv5.jpg"],
+      overview: "Reliable SUV with efficiency and comfort for families.",
+      technical: ["Engine: 2.5L I4", "FWD", "Seats: 5"],
+      features: ["Touchscreen display", "Lane assist", "Backup camera"]
+    },
+    "gle": {
+      title: "Mercedes-Benz GLE 350",
+      year: 2021,
+      km: "30,000",
+      transmission: "Automatic",
+      hp: 255,
+      price: "₦45,000,000",
+      images: ["/gle1.jpg","/gle2.jpg","/gle3.jpg","/gle4.jpg"],
+      overview: "Premium luxury SUV with outstanding performance.",
+      technical: ["Engine: 2.0L Turbo", "AWD", "Seats: 5"],
+      features: ["MBUX system", "Ambient lighting", "360° camera"]
+    },
+    "glc": {
+      title: "Mercedes-Benz GLC 300",
+      year: 2020,
+      km: "28,000",
+      transmission: "Automatic",
+      hp: 255,
+      price: "₦38,000,000",
+      images: ["/glc1.jpg","/glc2.jpg","/glc3.jpg","/glc4.jpg"],
+      overview: "Compact SUV with sporty design and luxury interior.",
+      technical: ["Engine: 2.0L Turbo", "RWD", "Seats: 5"],
+      features: ["Apple CarPlay", "Power liftgate", "Heated seats"]
+    }
+  };
+
+  // Get car id from URL
+  const params = new URLSearchParams(window.location.search);
+  const carId = params.get("id");
+
+  // Inject data
+  if (cars[carId]) {
+    const car = cars[carId];
+
+    document.getElementById("car-title").innerText = car.title;
+    document.getElementById("car-year").innerText = car.year;
+    document.getElementById("car-price").innerText = car.price;
+    document.getElementById("car-km").innerText = car.km;
+    document.getElementById("car-transmission").innerText = car.transmission;
+    document.getElementById("car-hp").innerText = car.hp + " hp";
+
+    document.getElementById("car-images").innerHTML = car.images.map(img => `<img src="${img}" alt="">`).join("");
+    document.getElementById("car-overview").innerText = car.overview;
+    document.getElementById("car-technical").innerHTML = car.technical.map(t => `<li>${t}</li>`).join("");
+    document.getElementById("car-features").innerHTML = car.features.map(f => `<li>${f}</li>`).join("");
+
+  } else {
+    document.getElementById("car-title").innerText = "Car Not Found";
+  }
+</script>
+
+<!-- JS Plugins -->
+<script src="jquery.min.js"></script>
+<script src="owl.carousel.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+      items:1,
+      loop:true,
+      autoplay:true
+    });
+  });
+</script>
+</body>
+</html>
