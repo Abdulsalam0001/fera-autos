@@ -217,28 +217,8 @@
 <script>
   // Car Database
   const cars = {
-    "accord2016": {
-      name: "Honda Accord 2016",
-      images: ["/h1.jpg","/h2.jpg","/h3.jpg","/h4.jpg","/h5.jpg"],
-      breadcrumb: "Honda Accord 2016",
-      overview: {
-        model: "Honda Accord 2016",
-        engine: "2.4L I4",
-        power: "185 Horsepower",
-        transmission: "CVT",
-        drivetrain: "FWD",
-        perf: ["0-60 mph: 7.6 seconds","Top Speed: 149 mph","City MPG: 13","Highway MPG: 16","Fuel Tank: 26.4 gallons"]
-      },
-      technical: {
-        engine: ["Engine Type: I4","Displacement: 2.4L","Compression: 10.1:1","Max Torque: 181 lb-ft","Valvetrain: DOHC"],
-        chassis: ["Transmission: CVT","Suspension: Independent","Steering: Electric","Brakes: ABS","Wheels: 17-inch Alloy"]
-      },
-      features: {
-        safety: ["ABS","Traction Control","Rearview Camera","Airbags"],
-        comfort: ["Cloth Seats","Dual-Zone AC","Bluetooth","Cruise Control"],
-        offroad: ["N/A"]
-      }
-    },
+  
+    
     "lexuses350": {
       name: "Lexus ES 350 2012",
       images: ["/l1.jpg","/l2.jpg","/l3.jpg","/l4.jpg","/l5.jpg"],
@@ -449,7 +429,8 @@
             "Premium Audio System"
         ]
     }
-},    "rav4le2017": {
+},
+  "rav4le2017": {
       name: "Toyota RAV4 LE 2017",
       images: ["/rv1.jpg","/rv2.jpg","/rv3.jpg","/rv4.jpg","/rv5.jpg"],
       breadcrumb: "Toyota RAV4 LE 2017",
@@ -470,8 +451,8 @@
         comfort: ["Fabric Seats","AC","Bluetooth","USB Ports"],
         offroad: ["Hill Start Assist","Traction Control"]
       }
-    }
-  };
+  }
+};
 
   // Get URL param
   const params = new URLSearchParams(window.location.search);
