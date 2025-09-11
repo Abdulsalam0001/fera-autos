@@ -366,38 +366,7 @@
         ]
     }
 },
-"rx2023": {
-    name: "2023 Lexus RX 350",
-    breadcrumb: "2023 Lexus RX 350",
-    images: ["/23rx1.jpg","/23rx2.jpg","/23rx3.jpg","/23rx4.jpg","/23rx5.jpg","/23rx6.jpg","/23rx7.jpg"],
-    overview: {
-        model: "2023 Lexus RX 350",
-        engine: "3.5L V6",
-        power: "295 Horsepower",
-        transmission: "8-Speed Automatic",
-        drivetrain: "AWD",
-        perf: ["0-60 mph: 7.2 seconds","Top Speed: 124 mph","City MPG: 20","Highway MPG: 27","Fuel Tank: 19.2 gallons"]
-    },
-    technical: {
-        engineType: "V6",
-        displacement: "3.5L",
-        compression: "11.8:1",
-        maxTorque: "268 lb-ft",
-        valvetrain: "DOHC",
-        chassis: {
-            transmission: "8-Speed Automatic",
-            suspension: "Independent MacPherson Strut / Double Wishbone",
-            steering: "Electric Power Steering",
-            brakes: "Ventilated Disc Brakes",
-            wheels: "20-inch Alloy"
-        }
-    },
-    features: {
-        safety: ["Pre-Collision System","Lane Departure Alert","Dynamic Radar Cruise Control","Blind Spot Monitor"],
-        comfort: ["Leather Interior","Heated & Ventilated Seats","Dual-Zone Climate Control","Power Tailgate"],
-        technology: ["Navigation System","Apple CarPlay / Android Auto","Wireless Charging","Premium Audio System"]
-    }
-},
+
     "rx2019": {
     name: "2019 Lexus RX 350",
     images: ["/9rx1.jpg","/9rx2.jpg","/9rx3.jpg","/9rx4.jpg","/9rx5.jpg","/9rx6.jpg","/9rx7.jpg"],
