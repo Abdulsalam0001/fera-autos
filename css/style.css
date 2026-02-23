@@ -1206,6 +1206,10 @@ ol {
 	background: #db2d2e;
 }
 
+.car__item__price .car-option.rent {
+	background: #28a745;
+}
+
 .car__item__price h6 {
 	font-size: 15px;
 	color: #db2d2e;
