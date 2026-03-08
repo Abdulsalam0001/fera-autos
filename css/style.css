@@ -1212,10 +1212,8 @@ ol {
 	background: #4971FF;
 	display: inline-block;
 	padding: 12px 22px 10px;
-	border-radius: 2px 0 0 2px;
-	position: absolute;
-	left: 0;
-	top: 0;
+	border-radius: 2px;
+	margin-bottom: 10px;
 }
 
 .car__item__price .car-option.sale {
@@ -1231,9 +1229,8 @@ ol {
 	color: #db2d2e;
 	font-weight: 700;
 	border-top: 1px solid #ebebeb;
-	padding-left: 120px;
-	padding-top: 14px;
-	padding-bottom: 11px;
+	padding: 14px 15px 11px;
+	margin: 0;
 }
 
 .car__item__price h6 span {
