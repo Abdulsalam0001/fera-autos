@@ -196,7 +196,7 @@
             <a href="./rentals.html" class="primary-btn">Rent Car</a>
         </div>
         <div class="offcanvas__logo">
-            <a href="./index.html"><img src="/logo.png" alt="Feral Autos Logo"></a>
+            <a href="./index.html"><img src="/assets/images/website/logo.png" alt="Feral Autos Logo" width="150" height="50" loading="lazy"></a>
         </div>
         <div id="mobile-menu-wrap"></div>
         <ul class="offcanvas__widget__add">
@@ -217,7 +217,7 @@
 
     <!-- Header Section Begin -->
     <header class="header">
-        <div class="header__top">Ii
+        <div class="header__top">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7">
@@ -246,7 +246,7 @@
             <div class="row">
                 <div class="col-lg-2">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="/logo.png" alt="Feral Autos"></a>
+                        <a href="./index.html"><img src="/assets/images/website/logo.png" alt="Feral Autos" width="150" height="50" loading="lazy"></a>
                     </div>
                 </div>
                 <div class="col-lg-10">
@@ -2526,7 +2526,7 @@
                 <div class="col-lg-4 col-md-4">
                     <div class="footer__about">
                         <div class="footer__logo">
-                            <a href="#"><img src="/logo.png" alt=""></a>
+                            <a href="#"><img src="/assets/images/website/logo.png" alt="" loading="lazy"></a>
                         </div>
                         <p>Visit us at Feral Autos showroom, Lekki, Lagos. We provide quality Nigerian and foreign-used cars at affordable prices.</p>
                         <div class="footer__social">
@@ -2607,6 +2607,114 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+// ===== SCROLL ANIMATION SYSTEM =====
+// (same script used on rentals.html; handles animate-on-scroll classes)
+document.addEventListener('DOMContentLoaded', function() {
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    if (animatedElements.length === 0) return;
+
+    // assign random classes & delays
+    animatedElements.forEach((el, idx) => {
+        el.classList.remove('animate-random-1','animate-random-2','animate-random-3','animate-random-4','animate-random-5');
+        const randomNum = (idx % 5) + 1;
+        el.classList.add(`animate-random-${randomNum}`);
+        el.classList.add(`delay-${(idx % 5) + 1}`);
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animated');
+            } else {
+                entry.target.classList.remove('animated');
+            }
+        });
+    }, { threshold: 0.2, rootMargin: '0px 0px -50px 0px' });
+
+    animatedElements.forEach(el => observer.observe(el));
+
+    // section‑specific helpers
+    const heroTitle = document.querySelector('.hero__text__title');
+    const heroPrice = document.querySelector('.hero__text__price');
+    const heroButtons = document.querySelectorAll('.hero__text .primary-btn');
+    if (heroTitle) heroTitle.classList.add('animate-on-scroll','animate-random-1');
+    if (heroPrice) heroPrice.classList.add('animate-on-scroll','animate-random-2','delay-2');
+    heroButtons.forEach((btn, i) => {
+        btn.classList.add('animate-on-scroll','animate-random-3');
+        btn.classList.add(`delay-${i+3}`);
+    });
+
+    const featureTitle = document.querySelector('.feature .section-title');
+    const featureDesc = document.querySelector('.feature__text__desc');
+    const featureItems = document.querySelectorAll('.feature__item');
+    if (featureTitle) featureTitle.classList.add('animate-on-scroll','animate-left');
+    if (featureDesc) featureDesc.classList.add('animate-on-scroll','animate-right','delay-2');
+    featureItems.forEach((item,i)=>{
+        item.classList.add('animate-on-scroll','animate-scale');
+        item.classList.add(`delay-${i+1}`);
+    });
+
+    const sectionTitles = document.querySelectorAll('.section-title');
+    sectionTitles.forEach((title,i)=>{
+        title.classList.add('animate-on-scroll','animate-random-4');
+        title.classList.add(`delay-${(i%3)+1}`);
+    });
+
+    const filterControls = document.querySelector('.filter__controls');
+    if (filterControls) filterControls.classList.add('animate-on-scroll','animate-random-5');
+
+    const carItems = document.querySelectorAll('.car__item');
+    carItems.forEach((item,i)=>{
+        item.classList.add('animate-on-scroll','animate-random-2');
+        const delay = (i % 4) +1;
+        item.classList.add(`delay-${delay}`);
+    });
+
+    const chooseusText = document.querySelector('.chooseus__text');
+    const chooseusVideo = document.querySelector('.chooseus__video');
+    if (chooseusText) {
+        chooseusText.classList.add('animate-on-scroll','animate-left');
+        const lis = chooseusText.querySelectorAll('li');
+        lis.forEach((li,i)=>{
+            li.classList.add('animate-on-scroll','animate-scale');
+            li.classList.add(`delay-${i+1}`);
+        });
+    }
+    if (chooseusVideo) chooseusVideo.classList.add('animate-on-scroll','animate-right','delay-3');
+
+    const ctaItems = document.querySelectorAll('.cta__item');
+    ctaItems.forEach((item,i)=>{
+        item.classList.add('animate-on-scroll','animate-random-1');
+        item.classList.add(`delay-${i+1}`);
+    });
+
+    const footerAbout = document.querySelector('.footer__about');
+    const footerWidgets = document.querySelectorAll('.footer__widget');
+    const footerBrand = document.querySelector('.footer__brand');
+    if (footerAbout) footerAbout.classList.add('animate-on-scroll','animate-left');
+    footerWidgets.forEach((w,i)=>{
+        w.classList.add('animate-on-scroll','animate-random-3');
+        w.classList.add(`delay-${i+1}`);
+    });
+    if (footerBrand) footerBrand.classList.add('animate-on-scroll','animate-right','delay-3');
+
+    const carSliders = document.querySelectorAll('.car__item__pic__slider');
+    carSliders.forEach((slider,i)=>{
+        slider.classList.add('animate-on-scroll','animate-random-4');
+        slider.classList.add(`delay-${(i%3)+1}`);
+    });
+
+    // Parallax hero background
+    window.addEventListener('scroll', function() {
+        const heroSection = document.querySelector('.hero');
+        if (heroSection) {
+            const scrollPosition = window.scrollY;
+            heroSection.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
+        }
+    });
+});
+    </script>
 </body>
 
 </html>
