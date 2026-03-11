@@ -44,6 +44,76 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
 
     <link rel="stylesheet" href="css/style.css" type="text/css">
+      <style>/* ===== SCROLL ANIMATIONS ===== */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
+                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity, transform;
+}
+
+.animate-on-scroll.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Different animation directions */
+.animate-left {
+    transform: translateX(-50px);
+}
+
+.animate-left.animated {
+    transform: translateX(0);
+}
+
+.animate-right {
+    transform: translateX(50px);
+}
+
+.animate-right.animated {
+    transform: translateX(0);
+}
+
+.animate-scale {
+    transform: scale(0.8);
+}
+
+.animate-scale.animated {
+    transform: scale(1);
+}
+
+.animate-rotate {
+    transform: rotate(-5deg) scale(0.9);
+}
+
+.animate-rotate.animated {
+    transform: rotate(0) scale(1);
+}
+
+/* Stagger delays for child elements */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+
+/* Random animation variations - these will be applied via JavaScript */
+.animate-random-1 {
+    transform: translate(-30px, 20px) rotate(-3deg) scale(0.9);
+}
+.animate-random-2 {
+    transform: translate(30px, -20px) rotate(3deg) scale(0.95);
+}
+.animate-random-3 {
+    transform: translateY(40px) scale(0.85);
+}
+.animate-random-4 {
+    transform: translateX(-40px) scale(0.9);
+}
+.animate-random-5 {
+    transform: translateX(40px) rotate(2deg) scale(0.9);
+}</style>
 </head>
 
 <body>
@@ -51,7 +121,14 @@
     <div id="preloder">
         <div class="loader"></div>
     </div>
-
+// Add this right after the preloader div in your HTML
+<script>
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        document.getElementById('preloder').classList.add('fade-out');
+    }, 500); // Small delay for smoother transition
+});
+</script>
     <!-- Offcanvas Menu Begin -->
     <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu-wrapper">
@@ -602,6 +679,160 @@
             });
         });
     </script>
+    <script>
+// ===== SCROLL ANIMATION SYSTEM =====
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // Elements to animate (add class 'animate-on-scroll' to any element you want animated)
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    
+    // If no elements found, exit
+    if (animatedElements.length === 0) return;
+    
+    // Assign random animation classes to each element
+    animatedElements.forEach((element, index) => {
+        // Remove any existing random classes
+        element.classList.remove('animate-random-1', 'animate-random-2', 'animate-random-3', 
+                                 'animate-random-4', 'animate-random-5');
+        
+        // Assign random class based on index for consistency
+        const randomNum = (index % 5) + 1;
+        element.classList.add(`animate-random-${randomNum}`);
+        
+        // Add random delay for staggered effect
+        const delayClass = `delay-${(index % 5) + 1}`;
+        element.classList.add(delayClass);
+    });
+    
+    // Create Intersection Observer
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // When element enters viewport
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animated');
+            } 
+            // When element leaves viewport - remove animation so it animates again when scrolling back
+            else {
+                entry.target.classList.remove('animated');
+            }
+        });
+    }, {
+        threshold: 0.2, // Trigger when 20% of element is visible
+        rootMargin: '0px 0px -50px 0px' // Slight offset for smoother triggering
+    });
+    
+    // Observe all animated elements
+    animatedElements.forEach(element => {
+        observer.observe(element);
+    });
+    
+    // ===== ADD ANIMATION CLASSES TO SPECIFIC SECTIONS =====
+    
+    // Hero section elements
+    const heroTitle = document.querySelector('.hero__text__title');
+    const heroPrice = document.querySelector('.hero__text__price');
+    const heroButtons = document.querySelectorAll('.hero__text .primary-btn');
+    
+    if (heroTitle) heroTitle.classList.add('animate-on-scroll', 'animate-random-1');
+    if (heroPrice) heroPrice.classList.add('animate-on-scroll', 'animate-random-2', 'delay-2');
+    
+    heroButtons.forEach((btn, index) => {
+        btn.classList.add('animate-on-scroll', 'animate-random-3');
+        btn.classList.add(`delay-${index + 3}`);
+    });
+    
+    // Feature/About section
+    const featureTitle = document.querySelector('.feature .section-title');
+    const featureDesc = document.querySelector('.feature__text__desc');
+    const featureItems = document.querySelectorAll('.feature__item');
+    
+    if (featureTitle) featureTitle.classList.add('animate-on-scroll', 'animate-left');
+    if (featureDesc) featureDesc.classList.add('animate-on-scroll', 'animate-right', 'delay-2');
+    
+    featureItems.forEach((item, index) => {
+        item.classList.add('animate-on-scroll', 'animate-scale');
+        item.classList.add(`delay-${index + 1}`);
+    });
+    
+    // Section titles throughout the page
+    const sectionTitles = document.querySelectorAll('.section-title');
+    sectionTitles.forEach((title, index) => {
+        title.classList.add('animate-on-scroll', 'animate-random-4');
+        title.classList.add(`delay-${(index % 3) + 1}`);
+    });
+    
+    // Filter controls
+    const filterControls = document.querySelector('.filter__controls');
+    if (filterControls) {
+        filterControls.classList.add('animate-on-scroll', 'animate-random-5');
+    }
+    
+    // Car items - each card animates individually
+    const carItems = document.querySelectorAll('.car__item');
+    carItems.forEach((item, index) => {
+        item.classList.add('animate-on-scroll', 'animate-random-2');
+        // Stagger based on grid position
+        const delay = (index % 4) + 1;
+        item.classList.add(`delay-${delay}`);
+    });
+    
+    // Choose us section
+    const chooseusText = document.querySelector('.chooseus__text');
+    const chooseusVideo = document.querySelector('.chooseus__video');
+    
+    if (chooseusText) {
+        chooseusText.classList.add('animate-on-scroll', 'animate-left');
+        const chooseusItems = chooseusText.querySelectorAll('li');
+        chooseusItems.forEach((item, index) => {
+            item.classList.add('animate-on-scroll', 'animate-scale');
+            item.classList.add(`delay-${index + 1}`);
+        });
+    }
+    
+    if (chooseusVideo) {
+        chooseusVideo.classList.add('animate-on-scroll', 'animate-right', 'delay-3');
+    }
+    
+    // CTA sections
+    const ctaItems = document.querySelectorAll('.cta__item');
+    ctaItems.forEach((item, index) => {
+        item.classList.add('animate-on-scroll', 'animate-random-1');
+        item.classList.add(`delay-${index + 1}`);
+    });
+    
+    // Footer elements
+    const footerAbout = document.querySelector('.footer__about');
+    const footerWidgets = document.querySelectorAll('.footer__widget');
+    const footerBrand = document.querySelector('.footer__brand');
+    
+    if (footerAbout) footerAbout.classList.add('animate-on-scroll', 'animate-left');
+    
+    footerWidgets.forEach((widget, index) => {
+        widget.classList.add('animate-on-scroll', 'animate-random-3');
+        widget.classList.add(`delay-${index + 1}`);
+    });
+    
+    if (footerBrand) footerBrand.classList.add('animate-on-scroll', 'animate-right', 'delay-3');
+    
+    // Animate car sliders individually
+    const carSliders = document.querySelectorAll('.car__item__pic__slider');
+    carSliders.forEach((slider, index) => {
+        slider.classList.add('animate-on-scroll', 'animate-random-4');
+        slider.classList.add(`delay-${(index % 3) + 1}`);
+    });
+    
+    // ===== OPTIONAL: Add parallax effect to hero background =====
+    window.addEventListener('scroll', function() {
+        const heroSection = document.querySelector('.hero');
+        if (heroSection) {
+            const scrollPosition = window.scrollY;
+            // Subtle parallax effect
+            heroSection.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
+        }
+    });
+    
+});
+</script>
 </body>
 
 </html>
