@@ -165,59 +165,351 @@
 
         /* Rental page specific styles */
         .rental-hero {
-            height: 400px;
+            height: 450px;
             display: flex;
             align-items: center;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/assets/images/website/rental-hero.jpg');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/assets/images/website/rental-hero.jpg');
             background-size: cover;
             background-position: center;
             color: white;
-            margin-bottom: 50px;
+            margin-top: 0;
+            position: relative;
+        }
+
+        .rental-hero .container {
+            position: relative;
+            z-index: 2;
         }
 
         .rental-hero h1 {
-            font-size: 48px;
-            font-weight: 700;
+            font-size: 52px;
+            font-weight: 800;
             margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .rental-hero p {
-            font-size: 18px;
-            max-width: 600px;
+            font-size: 20px;
+            max-width: 700px;
+            line-height: 1.6;
+            opacity: 0.9;
         }
 
-        .rental-info {
+        .rental-info-box {
             background: #f8f8f8;
-            padding: 30px;
-            border-radius: 10px;
-            margin-bottom: 30px;
+            padding: 40px;
+            border-radius: 15px;
+            height: 100%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
         }
 
-        .rental-info h3 {
+        .rental-info-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .rental-info-box h3 {
             color: #dd2a2a;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            font-size: 24px;
+            font-weight: 700;
+            border-bottom: 2px solid #dd2a2a;
+            padding-bottom: 15px;
         }
 
-        .rental-info ul {
+        .rental-info-box ul {
             list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .rental-info-box ul li {
+            margin-bottom: 15px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .rental-info-box ul li i {
+            color: #dd2a2a;
+            margin-right: 15px;
+            font-size: 18px;
+            width: 25px;
+            text-align: center;
+        }
+
+        /* Section spacing */
+        .spad {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        .spad-40 {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        /* Filter controls alignment */
+        .filter__controls {
+            text-align: center;
+            margin-bottom: 40px;
             padding: 0;
         }
 
-        .rental-info ul li {
-            margin-bottom: 10px;
-            font-size: 16px;
+        .filter__controls li {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 25px;
+            cursor: pointer;
+            border-radius: 30px;
+            background: #f8f8f8;
+            transition: all 0.3s ease;
         }
 
-        .rental-info ul li i {
+        .filter__controls li.active {
+            background: #dd2a2a;
+            color: white;
+        }
+
+        /* Car item alignment */
+        .car__item {
+            margin-bottom: 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .car__item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .car__item__pic__slider {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .car__item__pic__slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .car__item__text {
+            padding: 20px;
+        }
+
+        .car__item__text__inner {
+            margin-bottom: 15px;
+        }
+
+        .car__item__text__inner .label-date {
+            display: inline-block;
+            background: #dd2a2a;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .car__item__text__inner h5 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .car__item__text__inner ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .car__item__text__inner ul li {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .car__item__price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .car__item__price .car-option {
+            background: #28a745;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .car__item__price .car-option.rent {
+            background: #007bff;
+        }
+
+        .car__item__price h6 {
+            font-size: 20px;
+            font-weight: 700;
             color: #dd2a2a;
-            margin-right: 10px;
+            margin: 0;
+        }
+
+        /* Feature items alignment */
+        .feature__item {
+            text-align: center;
+            padding: 30px;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .feature__item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .feature__item__icon {
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+            background: #dd2a2a;
+            color: white;
+            font-size: 30px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+        }
+
+        .feature__item__text h5 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .feature__item__text p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Contact section alignment */
+        .contact {
+            background: #f8f8f8;
+        }
+
+        .contact__text ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 30px;
+        }
+
+        .contact__text ul li {
+            margin-bottom: 20px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact__text ul li i {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background: #dd2a2a;
+            color: white;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .contact__form {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .contact__form input,
+        .contact__form textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #e1e1e1;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .contact__form input:focus,
+        .contact__form textarea:focus {
+            border-color: #dd2a2a;
+            outline: none;
+            box-shadow: 0 0 10px rgba(221,42,42,0.1);
+        }
+
+        .site-btn {
+            background: #dd2a2a;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .site-btn:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .rental-hero h1 {
+                font-size: 36px;
+            }
+            
+            .rental-hero p {
+                font-size: 16px;
+            }
+            
+            .filter__controls li {
+                display: block;
+                margin: 10px 0;
+            }
+            
+            .rental-info-box {
+                margin-bottom: 30px;
+            }
+            
+            .contact__form {
+                margin-top: 30px;
+            }
         }
 
         /* Respect user motion preferences */
         @media (prefers-reduced-motion: reduce) {
             .animate-on-scroll,
             #preloder,
-            .loader {
+            .loader,
+            .car__item,
+            .feature__item,
+            .rental-info-box {
                 transition: none !important;
                 animation: none !important;
             }
@@ -295,7 +587,7 @@
             <div class="row">
                 <div class="col-lg-2">
                     <div class="header__logo animate-on-scroll animate-random-1">
-                        <a href="./index.html"><img src="/assets/images/website/logo.png" alt="Feral Autos" width="150" height="50" loading="lazy"></a>
+                        <a href="./index.html"><img src="/logo.png" alt="Feral Autos" width="150" height="50" loading="lazy"></a>
                     </div>
                 </div>
                 <div class="col-lg-10">
@@ -305,7 +597,7 @@
                                 <li><a href="./index.html">Home</a></li>
                                 <li><a href="./car.html">View Listing</a></li>
                                 <li><a href="./sell-car.html">Sell Car</a></li>
-                                <li class="active"><a href="./rentals.html">Rent Car</a></li>
+                                <li class="active"><a href="./rentals.html">Rentals</a></li>
                                 <li><a href="./about.html">About Us</a></li>
                                 <li><a href="mailto:admin@feralautos.org">Contact Admin</a></li>
                             </ul>
@@ -343,11 +635,11 @@
     <!-- Rental Hero Section End -->
 
     <!-- Rental Info Section Begin -->
-    <section class="rental-info spad">
+    <section class="spad-40">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="section-title animate-on-scroll animate-random-4">
+                    <div class="section-title animate-on-scroll animate-random-4 text-center">
                         <span>Why Rent From Us</span>
                         <h2>Premium Rental Services</h2>
                     </div>
@@ -355,13 +647,13 @@
             </div>
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="rental-info__box animate-on-scroll animate-left">
-                        <h3><i class="fa fa-check-circle" style="color: #dd2a2a; margin-right: 10px;"></i> Rental Benefits</h3>
+                    <div class="rental-info-box animate-on-scroll animate-left">
+                        <h3><i class="fa fa-check-circle"></i> Rental Benefits</h3>
                         <ul>
                             <li><i class="fa fa-shield"></i> Comprehensive insurance coverage</li>
                             <li><i class="fa fa-wrench"></i> 24/7 roadside assistance</li>
                             <li><i class="fa fa-car"></i> Well-maintained, sanitized vehicles</li>
-                            <li><i class="fa fa-map-marker"></i> Nationwide delivery and pickup</li>
+                            <li><i class="fa fa-map-marker"></i> State wide delivery and pickup</li>
                             <li><i class="fa fa-calendar"></i> Flexible daily, weekly, monthly rates</li>
                             <li><i class="fa fa-credit-card"></i> Multiple payment options</li>
                             <li><i class="fa fa-drivers-license"></i> Professional drivers available</li>
@@ -370,18 +662,19 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="rental-info__box animate-on-scroll animate-right delay-2">
-                        <h3><i class="fa fa-info-circle" style="color: #dd2a2a; margin-right: 10px;"></i> Rental Requirements</h3>
+                    <div class="rental-info-box animate-on-scroll animate-right">
+                        <h3><i class="fa fa-cogs"></i> Rental Process</h3>
                         <ul>
-                            <li><i class="fa fa-id-card"></i> Valid driver's license</li>
-                            <li><i class="fa fa-credit-card"></i> Security deposit required</li>
-                            <li><i class="fa fa-calendar-check-o"></i> Minimum 24-hour rental period</li>
-                            <li><i class="fa fa-user"></i> Driver must be 25+ years (exceptions apply)</li>
-                            <li><i class="fa fa-file-text"></i> Valid identification</li>
-                            <li><i class="fa fa-home"></i> Proof of residence</li>
+                            <li><i class="fa fa-search"></i> Browse our rental fleet online</li>
+                            <li><i class="fa fa-file-text"></i> Select your vehicle and rental dates</li>
+                            <li><i class="fa fa-credit-card"></i> Complete the booking with secure payment</li>
+                            <li><i class="fa fa-car"></i> Receive confirmation and rental agreement</li>
+                            <li><i class="fa fa-truck"></i> Vehicle delivery or pickup at your location</li>
+                            <li><i class="fa fa-phone"></i> 24/7 support during your rental period</li>
+                            <li><i class="fa fa-undo"></i> Return the vehicle at the end of your rental</li>
+                            <li><i class="fa fa-smile-o"></i> Enjoy your ride with Feral Autos!</li>
                         </ul>
                     </div>
-                </div>
             </div>
         </div>
     </section>
@@ -392,7 +685,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="section-title animate-on-scroll animate-random-4">
+                    <div class="section-title animate-on-scroll animate-random-4 text-center">
                         <span>Our Rental Fleet</span>
                         <h2>Available for Rent</h2>
                     </div>
@@ -427,7 +720,7 @@
                                 </ul>
                             </div>
                             <div class="car__item__price">
-                                <span class="car-option rent">Daily Rate (12 hrs)</span>
+                                <span class="car-option rent">Daily Rate</span>
                                 <h6>₦150,000/day</h6>
                             </div>
                         </div>
@@ -456,7 +749,7 @@
                                 </ul>
                             </div>
                             <div class="car__item__price">
-                                <span class="car-option rent">Daily Rate (12 hrs)</span>
+                                <span class="car-option rent">Daily Rate</span>
                                 <h6>₦120,000/day</h6>
                             </div>
                         </div>
@@ -485,7 +778,7 @@
                                 </ul>
                             </div>
                             <div class="car__item__price">
-                                <span class="car-option rent">Daily Rate (12 hrs)</span>
+                                <span class="car-option rent">Daily Rate</span>
                                 <h6>₦70,000/day</h6>
                             </div>
                         </div>
@@ -513,7 +806,7 @@
                                 </ul>
                             </div>
                             <div class="car__item__price">
-                                <span class="car-option rent">Daily Rate (12 hrs)</span>
+                                <span class="car-option rent">Daily Rate</span>
                                 <h6>₦100,000/day</h6>
                             </div>
                         </div>
@@ -543,7 +836,7 @@
                                     </ul>
                                 </div>
                                 <div class="car__item__price">
-                                    <span class="car-option rent">Daily Rate (12 hrs)</span>
+                                    <span class="car-option rent">Daily Rate</span>
                                     <h6>₦160,000/day</h6>
                                 </div>
                             </div>
@@ -574,7 +867,7 @@
                                     </ul>
                                 </div>
                                 <div class="car__item__price">
-                                    <span class="car-option rent">Daily Rate (12 hrs)</span>
+                                    <span class="car-option rent">Daily Rate</span>
                                     <h6>₦100,000/day</h6>
                                 </div>
                             </div>
@@ -605,7 +898,7 @@
                                     </ul>
                                 </div>
                                 <div class="car__item__price">
-                                    <span class="car-option rent">Daily Rate (12 hrs)</span>
+                                    <span class="car-option rent">Daily Rate</span>
                                     <h6>₦140,000/day</h6>
                                 </div>
                             </div>
@@ -634,7 +927,7 @@
                                     </ul>
                                 </div>
                                 <div class="car__item__price">
-                                    <span class="car-option rent">Daily Rate (12 hrs)</span>
+                                    <span class="car-option rent">Daily Rate</span>
                                     <h6>₦180,000/day</h6>
                                 </div>
                             </div>
@@ -663,7 +956,7 @@
                                     </ul>
                                 </div>
                                 <div class="car__item__price">
-                                    <span class="car-option rent">Daily Rate (12 hrs)</span>
+                                    <span class="car-option rent">Daily Rate</span>
                                     <h6>₦200,000/day</h6>
                                 </div>
                             </div>
@@ -693,7 +986,7 @@
                                     </ul>
                                 </div>
                                 <div class="car__item__price">
-                                    <span class="car-option rent">Daily Rate (12 hrs)</span>
+                                    <span class="car-option rent">Daily Rate</span>
                                     <h6>₦50,000/day</h6>
                                 </div>
                             </div>
@@ -722,8 +1015,38 @@
                                     </ul>
                                 </div>
                                 <div class="car__item__price">
-                                    <span class="car-option rent">Daily Rate (12 hrs)</span>
+                                    <span class="car-option rent">Daily Rate</span>
                                     <h6>₦45,000/day</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Lexus ES350 - Luxury Sedan -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mix rent luxury sedan">
+                    <div class="car__item animate-on-scroll animate-random-2 delay-4">
+                        <a href="./car-details-lexus.html" style="text-decoration:none;color:inherit;">
+                            <div class="car__item__pic__slider owl-carousel">
+                                <img loading="lazy" src="/assets/images/cars/l1.jpg" alt="Lexus ES350 - Front">
+                                <img loading="lazy" src="/assets/images/cars/l2.jpg" alt="Lexus ES350 - Side">
+                                <img loading="lazy" src="/assets/images/cars/l5.jpg" alt="Lexus ES350 - Interior">
+                                <img loading="lazy" src="/assets/images/cars/l3.jpg" alt="Lexus ES350 - Rear">
+                                <img loading="lazy" src="/assets/images/cars/l4.jpg" alt="Lexus ES350 - Dashboard">
+                            </div>
+                            <div class="car__item__text">
+                                <div class="car__item__text__inner">
+                                    <div class="label-date">2022</div>
+                                    <h5>Lexus ES350</h5>
+                                    <ul>
+                                        <li><span>15,000</span> km</li>
+                                        <li>Automatic</li>
+                                        <li><span>302</span> hp</li>
+                                    </ul>
+                                </div>
+                                <div class="car__item__price">
+                                    <span class="car-option rent">Daily Rate</span>
+                                    <h6>₦80,000/day</h6>
                                 </div>
                             </div>
                         </a>
@@ -739,7 +1062,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="section-title animate-on-scroll animate-random-4">
+                    <div class="section-title animate-on-scroll animate-random-4 text-center">
                         <span>Why Choose Us</span>
                         <h2>Rental Benefits</h2>
                     </div>
@@ -828,7 +1151,7 @@
                             <h2>Get in Touch</h2>
                         </div>
                         <div class="contact__text__desc">
-                            <p>Ready to rent a car? Contact us today to discuss your requirements and get a quote.</p>
+                            <p>Ready to rent a car? Contact us today to discuss your requirements and get a quote. Our team is ready to assist you 24/7.</p>
                             <ul>
                                 <li><i class="fa fa-phone"></i> +234 913224466861</li>
                                 <li><i class="fa fa-envelope"></i> support@feralautos.org</li>
