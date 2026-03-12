@@ -138,7 +138,7 @@ window.addEventListener('load', function() {
             <a href="./sell-car.html" class="primary-btn">Sell Car</a>
         </div>
         <div class="offcanvas__logo">
-            <a href="./index.html"><img src="/logo.png" alt="Feral Autos Logo"></a>
+            <a href="./index.html"><img src="/assets/images/website/logo.png" alt="Feral Autos Logo" width="150" height="50" loading="lazy"></a>
         </div>
         <div id="mobile-menu-wrap"></div>
         <ul class="offcanvas__widget__add">
@@ -686,8 +686,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Elements to animate (add class 'animate-on-scroll' to any element you want animated)
     const animatedElements = document.querySelectorAll('.animate-on-scroll');
     
-    // If no elements found, exit
-    if (animatedElements.length === 0) return;
+    // proceed regardless of initial matches; helper section code below will
+    // attach animation classes dynamically
     
     // Assign random animation classes to each element
     animatedElements.forEach((element, index) => {

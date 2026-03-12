@@ -196,7 +196,7 @@
             <a href="./rentals.html" class="primary-btn">Rent Car</a>
         </div>
         <div class="offcanvas__logo">
-            <a href="./index.html"><img src="/assets/images/website/logo.png" alt="Feral Autos Logo" width="150" height="50" loading="lazy"></a>
+            <a href="./index.html"><img src="/logo.png" alt="Feral Autos Logo" width="150" height="50" loading="lazy"></a>
         </div>
         <div id="mobile-menu-wrap"></div>
         <ul class="offcanvas__widget__add">
@@ -2612,7 +2612,8 @@
 // (same script used on rentals.html; handles animate-on-scroll classes)
 document.addEventListener('DOMContentLoaded', function() {
     const animatedElements = document.querySelectorAll('.animate-on-scroll');
-    if (animatedElements.length === 0) return;
+    // even if no elements initially have the class, we still add
+    // animation classes to key sections below
 
     // assign random classes & delays
     animatedElements.forEach((el, idx) => {
