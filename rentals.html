@@ -279,7 +279,8 @@
             overflow: hidden;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
-            background: white;
+            /* remove default white fill so background is transparent */
+            background: transparent;
         }
 
         .car__item:hover {
@@ -300,6 +301,7 @@
 
         .car__item__text {
             padding: 20px;
+            background: transparent;
         }
 
         .car__item__text__inner {
