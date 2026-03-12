@@ -82,6 +82,8 @@ body {
 	height: 100%;
 	font-family: "Lato", sans-serif;
 	-webkit-font-smoothing: antialiased;
+	/* prevent horizontal overflow causing page too wide */
+	overflow-x: hidden;
 }
 
 h1,
