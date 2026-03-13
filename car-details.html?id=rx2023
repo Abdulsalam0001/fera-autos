@@ -81,7 +81,7 @@
             <div class="row">
                 <div class="col-lg-2">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="/logo.png" alt=""></a>
+                        <a href="./index.html"><img src="/assets/images/cars/logo.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-10">
@@ -135,7 +135,7 @@
                 <div class="col-lg-9">
                     <div class="car__details__pic">
                         <div class="car__details__pic__large">
-                            <img class="car-big-img" id="car-main-img" src="/h1.jpg" alt="">
+                            <img class="car-big-img" id="car-main-img" src="/assets/images/cars/h1.jpg" alt="">
                         </div>
                         <div class="car-thumbs">
                             <div class="car-thumbs-track car__thumb__slider owl-carousel" id="car-thumbs">
@@ -219,7 +219,7 @@
   const cars = {
     "accord2016": {
       name: "Honda Accord 2016",
-      images: ["/h1.jpg","/h2.jpg","/h3.jpg","/h4.jpg","/h5.jpg"],
+      images: ["/assets/images/cars/h1.jpg","/assets/images/cars/h2.jpg","/assets/images/cars/h3.jpg","/assets/images/cars/h4.jpg","/assets/images/cars/h5.jpg"],
       breadcrumb: "Honda Accord 2016",
       overview: {
         model: "Honda Accord 2016",
@@ -241,7 +241,7 @@
     },
     "lexuses350": {
       name: "Lexus ES 350 2012",
-      images: ["/l1.jpg","/l2.jpg","/l3.jpg","/l4.jpg","/l5.jpg"],
+      images: ["/assets/images/cars/l1.jpg","/assets/images/cars/l2.jpg","/assets/images/cars/l3.jpg","/assets/images/cars/l4.jpg","/assets/images/cars/l5.jpg"],
       breadcrumb: "Lexus ES 350 2012",
       overview: {
         model: "Lexus ES 350 2012",
@@ -263,7 +263,7 @@
     },
     "gle2023": {
         name: "2023 Mercedes GLE",
-        images: ["/4g1.jpg","/4g2.jpg","/4g3.jpg","/4g4.jpg","/4g5.jpg","/4g6.jpg","/4g7.jpg"],
+        images: ["/assets/images/cars/4g1.jpg","/assets/images/cars/4g2.jpg","/assets/images/cars/4g3.jpg","/assets/images/cars/4g4.jpg","/assets/images/cars/4g5.jpg","/assets/images/cars/4g6.jpg","/assets/images/cars/4g7.jpg"],
         overview: {
             model: "2023 Mercedes GLE",
             engine: "3.0L Inline-6 Turbo",
@@ -316,7 +316,7 @@
 
 "es3502019": {
     name: "2019 Lexus ES 350",
-    images: ["/ll1.jpg","/ll2.jpg","/ll3.jpg","/ll4.jpg","/ll5.jpg","/ll6.jpg","/ll7.jpg"],
+    images: ["/assets/images/cars/ll1.jpg","/assets/images/cars/ll2.jpg","/assets/images/cars/ll3.jpg","/assets/images/cars/ll4.jpg","/assets/images/cars/ll5.jpg","/ll6.jpg","/assets/images/cars/ll7.jpg"],
     overview: {
         model: "2019 Lexus ES 350",
         engine: "3.5L V6",
@@ -369,7 +369,7 @@
 
     "rx2019": {
     name: "2019 Lexus RX 350",
-    images: ["/9rx1.jpg","/9rx2.jpg","/9rx3.jpg","/9rx4.jpg","/9rx5.jpg","/9rx6.jpg","/9rx7.jpg"],
+    images: ["/assets/images/cars/9rx1.jpg","/assets/images/cars/9rx2.jpg","/assets/images/cars/9rx3.jpg","/assets/images/cars/9rx4.jpg","/assets/images/cars/9rx5.jpg","/assets/images/cars/9rx6.jpg","/assets/images/cars/9rx7.jpg"],
     overview: {
         model: "2019 Lexus RX 350",
         engine: "3.5L V6",
@@ -420,7 +420,7 @@
     }
 },    "rav4le2017": {
       name: "Toyota RAV4 LE 2017",
-      images: ["/rv1.jpg","/rv2.jpg","/rv3.jpg","/rv4.jpg","/rv5.jpg"],
+      images: ["/assets/images/cars/rv1.jpg","/assets/images/cars/rv2.jpg","/assets/images/cars/rv3.jpg","/assets/images/cars/rv4.jpg","/assets/images/cars/rv5.jpg"],
       breadcrumb: "Toyota RAV4 LE 2017",
       overview: {
         model: "Toyota RAV4 LE 2017",
