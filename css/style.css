@@ -847,7 +847,7 @@ ol {
 
 .feature__item {
 	text-align: center;
-	float: right;
+	float: none;
 	margin-bottom: 45px;
 }
 
@@ -860,6 +860,13 @@ ol {
 	text-align: center;
 	margin-bottom: 20px !important;
 	margin: 0 auto;
+}
+
+.feature__item .feature__item__icon i {
+	font-size: 38px;
+	color: #ff4200;
+	display: inline-block;
+	line-height: 100px;
 }
 
 .feature__item h6 {
